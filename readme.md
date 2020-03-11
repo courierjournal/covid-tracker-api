@@ -1,5 +1,5 @@
 # COVID Tracker API
-A quick and dirty modular API designed scrape information on the COVID-19 status in the US. This is an experimental prototype.
+A quick and dirty modular API designed to scrape information on COVID-19 status in the US. This is an experimental prototype.
 
 https://cv19.newscarr.net
 

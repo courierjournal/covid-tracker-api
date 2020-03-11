@@ -25,10 +25,10 @@ let scraper = async id => {
       id: "ky004",
       module: ctp
     },
-    {
+    /*{
       id: "ky005",
       module: cjTracker
-    }
+    }*/
   ];
 
   //Filter scraper list by id if specified

@@ -1,40 +1,218 @@
 [
   {
+    "label": "alabama",
+    "abbr": "al"
+  },
+  {
+    "label": "alaska",
+    "abbr": "ak"
+  },
+  {
+    "label": "arizona",
+    "abbr": "az"
+  },
+  {
+    "label": "arkansas",
+    "abbr": "ar"
+  },
+  {
+    "label": "california",
+    "abbr": "ca"
+  },
+  {
+    "label": "colorado",
+    "abbr": "co"
+  },
+  {
+    "label": "connecticut",
+    "abbr": "ct"
+  },
+  {
+    "label": "delaware",
+    "abbr": "de"
+  },
+  {
+    "label": "florida",
+    "abbr": "fl"
+  },
+  {
+    "label": "georgia",
+    "abbr": "ga"
+  },
+  {
+    "label": "hawaii",
+    "abbr": "hi"
+  },
+  {
+    "label": "idaho",
+    "abbr": "id"
+  },
+  {
+    "label": "illinois",
+    "abbr": "il"
+  },
+  {
+    "label": "indiana",
+    "abbr": "in",
+    "scrapers": [
+      {
+        "id": "in1000",
+        "module": "isdh"
+      }
+    ]
+  },
+  {
+    "label": "iowa",
+    "abbr": "ia"
+  },
+  {
+    "label": "kansas",
+    "abbr": "ks"
+  },
+  {
     "label": "kentucky",
     "abbr": "ky",
     "scrapers": [
       {
-        "id": "ky001",
+        "id": "ky1000",
         "module": "chfs"
       },
       {
-        "id": "ky002",
-        "module": "hopkins"
-      },
-      {
-        "id": "ky003",
-        "module": "uow"
-      },
-      {
-        "id": "ky004",
-        "module": "ctp"
-      },
-      {
-        "id": "ky005",
+        "id": "ky1001",
         "module": "cjtracker"
       }
     ]
   },
   {
-    "label": "indiana",
-    "abbr": "in"
+    "label": "louisiana",
+    "abbr": "la"
+  },
+  {
+    "label": "maine",
+    "abbr": "me"
+  },
+  {
+    "label": "maryland",
+    "abbr": "md"
+  },
+  {
+    "label": "massachusetts",
+    "abbr": "ma"
+  },
+  {
+    "label": "michigan",
+    "abbr": "mi"
+  },
+  {
+    "label": "minnesota",
+    "abbr": "mn"
+  },
+  {
+    "label": "mississippi",
+    "abbr": "ms"
+  },
+  {
+    "label": "missouri",
+    "abbr": "mo"
+  },
+  {
+    "label": "montana",
+    "abbr": "mt"
+  },
+  {
+    "label": "nebraska",
+    "abbr": "ne"
+  },
+  {
+    "label": "nevada",
+    "abbr": "nv"
+  },
+  {
+    "label": "new hampshire",
+    "abbr": "nh"
+  },
+  {
+    "label": "new jersey",
+    "abbr": "nj"
+  },
+  {
+    "label": "new mexico",
+    "abbr": "nm"
+  },
+  {
+    "label": "new york",
+    "abbr": "ny"
+  },
+  {
+    "label": "north carolina",
+    "abbr": "nc"
+  },
+  {
+    "label": "north dakota",
+    "abbr": "nd"
   },
   {
     "label": "ohio",
     "abbr": "oh"
   },
   {
+    "label": "oklahoma",
+    "abbr": "ok"
+  },
+  {
+    "label": "oregon",
+    "abbr": "or"
+  },
+  {
+    "label": "pennsylvania",
+    "abbr": "pa"
+  },
+  {
+    "label": "rhode island",
+    "abbr": "ri"
+  },
+  {
+    "label": "south carolina",
+    "abbr": "sc"
+  },
+  {
+    "label": "south dakota",
+    "abbr": "sd"
+  },
+  {
     "label": "tennessee",
     "abbr": "tn"
+  },
+  {
+    "label": "texas",
+    "abbr": "tx"
+  },
+  {
+    "label": "utah",
+    "abbr": "ut"
+  },
+  {
+    "label": "vermont",
+    "abbr": "vt"
+  },
+  {
+    "label": "virginia",
+    "abbr": "va"
+  },
+  {
+    "label": "washington",
+    "abbr": "wa"
+  },
+  {
+    "label": "west virginia",
+    "abbr": "wv"
+  },
+  {
+    "label": "wisconsin",
+    "abbr": "wi"
+  },
+  {
+    "label": "wyoming",
+    "abbr": "wy"
   }
 ]

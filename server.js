@@ -1,15 +1,12 @@
 const app = require("express")();
 const cache = require("./middleware/cache");
+const scraper = require("./scrapers/scraper-core");
+const stateMap = require("./supported-states.json");
 const port = 3000;
 
-//Dynamically load our scrapers
-const stateMap = require("./supported-states.json");
-let scrapers = {};
-stateMap.forEach(n => {
-  scrapers[n.label] = require(`./scrapers/${n.label}/${n.label}`);
-});
-
-
+/**************/
+/*** ROUTES ***/
+/**************/
 
 /* GET all data for a particular state */
 app.get("/api/status/:state/:id?", cache(300), async (req, res) => {
@@ -22,8 +19,7 @@ app.get("/api/status/:state/:id?", cache(300), async (req, res) => {
   if (!stateMap.find(n => n.abbr === state)) {
     res.status(400).send("Requested state not yet supported");
   } else {
-    let thisState = stateMap.find(n => n.abbr === state);
-    let data = await scrapers[thisState.label](id);
+    let data = await scraper(state, id);
     res.json(data);
   }
 });

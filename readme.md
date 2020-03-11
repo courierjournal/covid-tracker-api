@@ -1,7 +1,10 @@
+# COVID Tracker API
+A quick and dirty modular API designed scrape information on the COVID-19 status in the US.
+
 ## Routing
 
-* `api/{state-abbr}` - Get all data currently available for that state
-* `api/{state-abbr}/{scaper-id}` - Get the data for that state for only that sraper
+* `api/status/{state-abbr}` - Get all data currently available for that state
+* `api/status/{state-abbr}/{scaper-id}` - Get the data for that state for only that sraper
 * `api/supported-states` - A list of currently supported states 
 
 ## Conventions

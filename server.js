@@ -9,7 +9,7 @@ stateMap.forEach(n => {
 });
 
 /* GET all data for a particular state */
-app.get("/api/:state/:id?", async (req, res) => {
+app.get("/api/status/:state/:id?", async (req, res) => {
   //Get params
   let state = req.params.state;
   let id = req.params.id;

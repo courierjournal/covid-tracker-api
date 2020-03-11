@@ -7,9 +7,8 @@ let meta = {
   source: "Courier Journal"
 };
 
-let key = "170bNaKm4BIWnS_5xCOzmJgZKO1uBDGp2QUZjwsS8ouE";
-
 let core = async (id, state) => {
+  let key = "170bNaKm4BIWnS_5xCOzmJgZKO1uBDGp2QUZjwsS8ouE";
   let thisState = stateMap.find(n => n.abbr === state);
   let rawData = await tabletop.init({ key, parseNumbers: true });
   let filteredInstances = rawData[thisState.label].elements.filter(

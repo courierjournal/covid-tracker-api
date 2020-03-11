@@ -1,12 +1,17 @@
 const hopkins = require("../generic/hopkins");
 const uow = require("../generic/uow");
 const ctp = require("../generic/ctp");
+const isdh = require("./isdh");
 
 let scraper = async id => {
   let startTime = new Date().getTime();
 
   //Setup our scrapers
   let scraperList = [
+    {
+      id: "in001",
+      module: isdh
+    },
     {
       id: "in002",
       module: hopkins

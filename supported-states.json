@@ -1,7 +1,29 @@
 [
   {
     "label": "kentucky",
-    "abbr": "ky"
+    "abbr": "ky",
+    "scrapers": [
+      {
+        "id": "ky001",
+        "module": "chfs"
+      },
+      {
+        "id": "ky002",
+        "module": "hopkins"
+      },
+      {
+        "id": "ky003",
+        "module": "uow"
+      },
+      {
+        "id": "ky004",
+        "module": "ctp"
+      },
+      {
+        "id": "ky005",
+        "module": "cjtracker"
+      }
+    ]
   },
   {
     "label": "indiana",

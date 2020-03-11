@@ -1,35 +1,21 @@
-const chfs = require("./kychfs");
-const hopkins = require("../generic/hopkins");
-const uow = require("../generic/uow");
-const ctp = require("../generic/ctp");
-const cjTracker = require("../generic/cj-tracker");
+//Dynamic import namespace
+let scrapers = {};
 
-let scraper = async id => {
+//Generic US wide scrapers
+scrapers.hopkins = require("../generic/hopkins");
+scrapers.uow = require("../generic/uow");
+scrapers.ctp = require("../generic/ctp");
+scrapers.cjtracker = require("../generic/cj-tracker");
+
+//State specific
+scrapers.chfs = require("./kychfs");
+
+const stateMap = require("../supported-states.json");
+
+let scraper = async (state, id) => {
   let startTime = new Date().getTime();
-
-  //Setup our scrapers
-  let scraperList = [
-    {
-      id: "ky001",
-      module: chfs
-    },
-    {
-      id: "ky002",
-      module: hopkins
-    },
-    {
-      id: "ky003",
-      module: uow
-    },
-    {
-      id: "ky004",
-      module: ctp
-    },
-    {
-      id: "ky005",
-      module: cjTracker
-    }
-  ];
+  let thisState = stateMap.find(n => n.abbr === state);
+  let scraperList = thisState.scrapers || [];
 
   //Filter scraper list by id if specified
   if (id) {
@@ -48,7 +34,9 @@ let scraper = async id => {
 
   //Run each scraper and log the results
   for (var i = 0; i < scraperList.length; i++) {
-    res.sources.push(await scraperList[i].module(scraperList[i].id, "ky"));
+    res.sources.push(
+      await scrapers[scraperList[i]](scraperList[i].id, thisState.abbr)
+    );
   }
 
   //Count the number of sources

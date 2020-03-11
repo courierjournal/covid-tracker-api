@@ -1,4 +1,5 @@
 const app = require("express")();
+const cache = require("./middleware/cache");
 const port = 3000;
 
 //Dynamically load our scrapers
@@ -8,8 +9,10 @@ stateMap.forEach(n => {
   scrapers[n.label] = require(`./scrapers/${n.label}/${n.label}`);
 });
 
+
+
 /* GET all data for a particular state */
-app.get("/api/status/:state/:id?", async (req, res) => {
+app.get("/api/status/:state/:id?", cache(300), async (req, res) => {
   //Get params
   let state = req.params.state;
   let id = req.params.id;
@@ -19,7 +22,7 @@ app.get("/api/status/:state/:id?", async (req, res) => {
   if (!stateMap.find(n => n.abbr === state)) {
     res.status(400).send("Requested state not yet supported");
   } else {
-    let thisState = stateMap.find(n => n.abbr === state)
+    let thisState = stateMap.find(n => n.abbr === state);
     let data = await scrapers[thisState.label](id);
     res.json(data);
   }

@@ -15,8 +15,15 @@ let core = async (id, state) => {
   let rawData = {};
   try {
     let query = await axios(
-      "https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases/FeatureServer/1/query?where=Confirmed%3E%3D0&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pgeojson&token="
+      "https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases/FeatureServer/1/query?where=Confirmed%3E%3D0&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pgeojson&token=",
+      { timeout: 5000 }
     );
+
+    //Handle wonkiness of the endpoint not responding properly
+    if(typeof query.data !== 'object'){
+      throw "Response was not valid JSON"
+    }
+
     rawData = {
       ok: true,
       data: query.data
@@ -33,7 +40,7 @@ let core = async (id, state) => {
       .filter(n => n.properties.Province_State !== null)
       .find(n => n.properties.Province_State.toLowerCase() === thisState.label);
 
-    return {
+    rawData.output = {
       id,
       meta,
       data: {
@@ -43,9 +50,8 @@ let core = async (id, state) => {
         updated: stateData.properties.Last_Update / 1000
       }
     };
-  } else {
-    return rawData;
   }
+  return rawData;
 };
 
 module.exports = core;

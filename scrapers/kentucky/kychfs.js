@@ -28,22 +28,40 @@ let cleanTimestamp = str => {
 };
 
 let core = async id => {
-  let data = await axios(meta.url);
-  const $ = cheerio.load(data.data);
-  const txt = $(
-    "#ctl00_ctl00_PlaceHolderContentFromChild_PlaceHolderContent_ctl01__ControlWrapper_RichHtmlField > div"
-  ).text();
+  let url = "https://chfs.ky.gov/agencies/dph/pages/covid19.aspx";
+  let rawData = {};
 
-  return {
-    id,
-    meta,
-    data: {
-      tested: regexr(txt, "Number Tested: "),
-      confirmed: regexr(txt, "Positive: "),
-      negative: regexr(txt, "Negative: "),
-      updated: cleanTimestamp(txt)
-    }
-  };
+  try {
+    let query = await axios(meta.url);
+    rawData = {
+      ok: true,
+      data: query.data
+    };
+  } catch (err) {
+    rawData = {
+      ok: false,
+      msg: err
+    };
+  }
+
+  if (rawData.ok) {
+    const $ = cheerio.load(rawData.data);
+    const txt = $(
+      "#ctl00_ctl00_PlaceHolderContentFromChild_PlaceHolderContent_ctl01__ControlWrapper_RichHtmlField > div"
+    ).text();
+
+    rawData.output = {
+      id,
+      meta,
+      data: {
+        tested: regexr(txt, "Number Tested: "),
+        confirmed: regexr(txt, "Positive: "),
+        negative: regexr(txt, "Negative: "),
+        updated: cleanTimestamp(txt)
+      }
+    };
+  }
+  return rawData;
 };
 
 module.exports = core;

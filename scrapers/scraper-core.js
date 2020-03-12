@@ -57,14 +57,21 @@ let scraper = async (state, id) => {
     dataSources: 0,
     scraperTimestamp: startTime,
     scraperDuration: null,
-    sources: []
+    sources: [],
+    scrapersUnavailable: []
   };
 
   //Run each scraper and log the results
   for (var i = 0; i < scraperList.length; i++) {
-    res.sources.push(
-      await scrapers[scraperList[i].module](scraperList[i].id, thisState.abbr)
+    let scraperData = await scrapers[scraperList[i].module](
+      scraperList[i].id,
+      thisState.abbr
     );
+    if (scraperData.ok) {
+      res.sources.push(scraperData.output);
+    } else {
+      res.scrapersUnavailable.push(scraperList[i].id);
+    }
   }
 
   //Count the number of sources

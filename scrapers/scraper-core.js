@@ -12,13 +12,14 @@ scrapers.kychfs = require("./kentucky/kychfs");
 scrapers.isdh = require("./indiana/isdh");
 
 const scraperMap = require("../config/scrapers.json");
-const cache = require("../data/cache.json");
+const diskCache = require("../lib/disk-cache")
 
 /**
  * Scraper core
  */
 let scraper = async () => {
   let collection = [];
+  let cache = await diskCache.get('us');
 
   //Run each scraper and log the results into a collection
   for (var i = 0; i < scraperMap.length; i++) {
@@ -48,13 +49,13 @@ let scraper = async () => {
   //Iterate through the cache to find the highest value
   for (state in cache) {
     let highestRank = { count: 0, source: null, sourceUpdated: 0 };
-    let highestCounty = 0
-    let countyMeta = {source: null, sourceUpdated: 0, counties: []};
+    let highestCounty = 0;
+    let countyMeta = { source: null, sourceUpdated: 0, counties: [] };
 
     cache[state].rawData.forEach(n => {
       //Rank confirmed totals
       let confirmed = n.output.find(y => y.label === "confirmed");
-      let updated = n.output.find(y=>y.label==="updated")
+      let updated = n.output.find(y => y.label === "updated");
       if (confirmed.value > highestRank.count) {
         highestRank.count = confirmed.value;
         highestRank.source = n.id;
@@ -63,23 +64,26 @@ let scraper = async () => {
 
       //Rank county totals
       let countyCount = n.counties.reduce((acc, cur) => acc + cur.confirmed, 0);
-      if(countyCount > highestCounty){
+      if (countyCount > highestCounty) {
         countyMeta = {
           source: n.id,
-          sourceUpdated: updated,
-          counties: n.counties
-        } 
+          sourceUpdated: updated.value,
+          counties: n.counties.map(x => {
+            return {
+              county: x.county,
+              confirmed: x.confirmed
+            };
+          })
+        };
       }
-      
     });
     cache[state].confirmed = highestRank;
     cache[state].counties = countyMeta;
   }
 
   //Send the updated cache to be saved
-
-  //Return our response
-  return cache;
+  let cacheResults = await diskCache.set(cache);
+  return cacheResults
 };
 
 (async () => {

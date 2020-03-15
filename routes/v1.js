@@ -12,7 +12,7 @@ router.get("/data/:state?", cache(routeConfig.v1.ttl), async (req, res) => {
   if (state !== "us" && !stateMap.find(n => n.abbr === state)) {
     res.status(400).send("Requested state not found");
   } else {
-    let data = await diskCache(state);
+    let data = await diskCache.get(state);
     res.json(data);
   }
 });

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "us100",
+    "url": "https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6",
+    "name": "The Center for Systems Science and Engineering (CSSE) at Johns Hopkins University",
+    "coverage": "us",
+    "module": "hopkins"
+  },
+  {
+    "id": "us101",
+    "url": "https://covid.cape.io/states",
+    "name": "The COVID Tracking Project",
+    "coverage": "us",
+    "module": "ctp"
+  },
+  {
+    "id": "us102",
+    "url": "https://hgis.uw.edu/virus/",
+    "name": "University of Washington HGIS Lab",
+    "coverage": "us",
+    "module": "uow"
+  },
+  {
+    "id": "ky200",
+    "url": "https://chfs.ky.gov/agencies/dph/pages/covid19.aspx",
+    "name": "Kentucky Cabinet for Health and Family Services",
+    "coverage": "ky",
+    "module": "kychfs"
+  },
+  {
+    "id": "ky201",
+    "url": "https://docs.google.com/spreadsheets/d/170bNaKm4BIWnS_5xCOzmJgZKO1uBDGp2QUZjwsS8ouE/edit#gid=0",
+    "name": "Courier Journal COVID-19 Tracker",
+    "coverage": "ky",
+    "module": "cjtracker"
+  },
+  {
+    "id": "in200",
+    "url": "https://www.in.gov/isdh/28470.htm",
+    "name": "Indiana State Health Department",
+    "coverage": "in",
+    "module": "isdh"
+  }
+]

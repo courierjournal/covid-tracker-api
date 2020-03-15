@@ -53,13 +53,7 @@
   },
   {
     "label": "indiana",
-    "abbr": "in",
-    "scrapers": [
-      {
-        "id": "in1000",
-        "module": "isdh"
-      }
-    ]
+    "abbr": "in"
   },
   {
     "label": "iowa",
@@ -71,17 +65,7 @@
   },
   {
     "label": "kentucky",
-    "abbr": "ky",
-    "scrapers": [
-      {
-        "id": "ky1000",
-        "module": "chfs"
-      },
-      {
-        "id": "ky1001",
-        "module": "cjtracker"
-      }
-    ]
+    "abbr": "ky"
   },
   {
     "label": "louisiana",

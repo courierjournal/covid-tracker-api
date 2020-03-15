@@ -1,26 +1,22 @@
 const tabletop = require("tabletop");
-const stateMap = require("../../supported-states.json");
 
-let meta = {
-  url:
-    "https://docs.google.com/spreadsheets/d/170bNaKm4BIWnS_5xCOzmJgZKO1uBDGp2QUZjwsS8ouE/edit#gid=0",
-  source: "Courier Journal"
-};
+const scraperId = "ky201";
 
-let core = async (id, state) => {
+let core = async () => {
   let sheetsKey = "170bNaKm4BIWnS_5xCOzmJgZKO1uBDGp2QUZjwsS8ouE";
-  let thisState = stateMap.find(n => n.abbr === state);
-  let rawData = {};
+  let res = {};
 
   try {
     let query = await tabletop.init({ key: sheetsKey, parseNumbers: true });
+
     if (typeof query !== "object") {
       throw "Response was not valid JSON";
     }
 
-    rawData = {
+    res = {
       ok: true,
-      data: query
+      data: query,
+      results: []
     };
   } catch (err) {
     rawData = {
@@ -29,8 +25,8 @@ let core = async (id, state) => {
     };
   }
 
-  if (rawData.ok) {
-    let filteredInstances = rawData.data[thisState.label].elements.filter(
+  if (res.ok) {
+    let filteredInstances = res.data["kentucky"].elements.filter(
       n => n.confirmed > 0
     );
 
@@ -62,20 +58,30 @@ let core = async (id, state) => {
       });
     }
 
-    rawData.output = {
-      id,
-      meta,
-      data: {
-        confirmed: counties.reduce((acc, cur) => acc + cur.confirmed, 0),
-        deaths: counties.reduce((acc, cur) => acc + cur.deaths, 0),
-        recovered: counties.reduce((acc, cur) => acc + cur.recovered, 0),
-        active: counties.reduce((acc, cur) => acc + cur.active, 0),
-        counties,
-        updated: null //Can't get proper timestamp from Tabletop :(
+    res.results = [
+      {
+        state: "ky",
+        id: scraperId,
+        raw: [
+          {
+            label: "confirmed",
+            value: counties.reduce((acc, cur) => acc + cur.confirmed, 0)
+          },
+          {
+            label: "deaths",
+            value: counties.reduce((acc, cur) => acc + cur.deaths, 0)
+          },
+          {
+            label: "recovered",
+            value: counties.reduce((acc, cur) => acc + cur.recovered, 0)
+          },
+          { label: "updated", value: null }
+        ],
+        counties
       }
-    };
+    ];
   }
-  return rawData;
+  return res;
 };
 
 module.exports = core;

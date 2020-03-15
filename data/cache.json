@@ -1,0 +1,502 @@
+{
+  "al": {
+    "state": "alabama",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ak": {
+    "state": "alaska",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "az": {
+    "state": "arizona",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ar": {
+    "state": "arkansas",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ca": {
+    "state": "california",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "co": {
+    "state": "colorado",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ct": {
+    "state": "connecticut",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "de": {
+    "state": "delaware",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "fl": {
+    "state": "florida",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ga": {
+    "state": "georgia",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "hi": {
+    "state": "hawaii",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "id": {
+    "state": "idaho",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "il": {
+    "state": "illinois",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "in": {
+    "state": "indiana",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ia": {
+    "state": "iowa",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ks": {
+    "state": "kansas",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ky": {
+    "state": "kentucky",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "la": {
+    "state": "louisiana",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "me": {
+    "state": "maine",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "md": {
+    "state": "maryland",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ma": {
+    "state": "massachusetts",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "mi": {
+    "state": "michigan",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "mn": {
+    "state": "minnesota",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ms": {
+    "state": "mississippi",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "mo": {
+    "state": "missouri",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "mt": {
+    "state": "montana",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ne": {
+    "state": "nebraska",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "nv": {
+    "state": "nevada",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "nh": {
+    "state": "new hampshire",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "nj": {
+    "state": "new jersey",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "nm": {
+    "state": "new mexico",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ny": {
+    "state": "new york",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "nc": {
+    "state": "north carolina",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "nd": {
+    "state": "north dakota",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "oh": {
+    "state": "ohio",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ok": {
+    "state": "oklahoma",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "or": {
+    "state": "oregon",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "pa": {
+    "state": "pennsylvania",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ri": {
+    "state": "rhode island",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "sc": {
+    "state": "south carolina",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "sd": {
+    "state": "south dakota",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "tn": {
+    "state": "tennessee",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "tx": {
+    "state": "texas",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "ut": {
+    "state": "utah",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "vt": {
+    "state": "vermont",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "va": {
+    "state": "virginia",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "wa": {
+    "state": "washington",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "wv": {
+    "state": "west virginia",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "wi": {
+    "state": "wisconsin",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  },
+  "wy": {
+    "state": "wyoming",
+    "confirmed": {
+      "count": 0,
+      "source": null,
+      "sourceUpdated": null
+    },
+    "counties": [],
+    "rawData": []
+  }
+}

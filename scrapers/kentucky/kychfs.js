@@ -65,7 +65,6 @@ let core = async () => {
         raw: [
           { label: "confirmed", value: regexr(txt, "Positive: ") },
           { label: "tested", value: regexr(txt, "Number Tested: ") },
-          { label: "negative", value: regexr(txt, "Negative: ") },
           { label: "updated", value: cleanTimestamp(txt) }
         ],
         counties: []

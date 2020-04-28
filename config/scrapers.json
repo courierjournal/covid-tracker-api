@@ -8,7 +8,7 @@
   },
   {
     "id": "us101",
-    "url": "https://covid.cape.io/states",
+    "url": "https://covidtracking.com/api/v1/states/current.json",
     "name": "The COVID Tracking Project",
     "coverage": "us",
     "module": "ctp"
